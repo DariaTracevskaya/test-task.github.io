@@ -1,0 +1,18 @@
+.list {
+  font-size: 1.125rem;
+  line-height: 1.2;
+  color: $black;
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  &__item {
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

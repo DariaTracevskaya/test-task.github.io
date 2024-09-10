@@ -1,0 +1,104 @@
+.menu {
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    @media screen and (max-width: $md) {
+      gap: 30px;
+    }
+
+    @media screen and (max-width: $sm) {
+      position: fixed;
+      top: 90px;
+      right: 0;
+      left: 100%;
+      height: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px;
+      background-color: $black100;
+      transition: left 0.3s;
+    }
+  }
+
+  &--shown {
+    ul {
+      left: 0;
+    }
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 0.8125rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: $white;
+
+    &--active,
+    &:hover {
+      color: $blue300;
+    }
+
+    @media screen and (max-width: $sm) {
+      font-size: 1rem;
+    }
+  }
+
+  &__icon {
+    display: none;
+
+    @media screen and (max-width: $sm) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+
+      & > div {
+        position: relative;
+        width: 35px;
+        height: 2px;
+        background-color: $white;
+
+        &:after,
+        &:before {
+          content: "";
+          position: absolute;
+          width: 35px;
+          height: 2px;
+          background-color: $white;
+          transition: transform 0.3s;
+        }
+
+        &:before {
+          top: -10px;
+        }
+
+        &:after {
+          bottom: -10px;
+        }
+      }
+
+      &--opened {
+        & > div {
+          height: 0;
+
+          &:after {
+            top: 0;
+            bottom: 0;
+            transform: rotate(45deg);
+          }
+
+          &:before {
+            top: 0;
+            bottom: 0;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+}

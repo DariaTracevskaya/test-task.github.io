@@ -1,0 +1,30 @@
+.payment-systems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 38px;
+  padding: 0 40px;
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media screen and (max-width: $lg) {
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  @media screen and (max-width: $md) {
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
+}

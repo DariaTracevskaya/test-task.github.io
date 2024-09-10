@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="/" class="header__logo">
+          LoremIpsum.<span class="highlighted-text">Net</span>
+        </a>
+        <nav id="header-menu" class="menu header__menu">
+          <div id="burger-menu" class="menu__icon">
+            <div></div>
+          </div>
+          <ul>
+            <li>
+              <a href="index.html" class="menu__link menu__link--active"
+                >Бизнес</a
+              >
+            </li>
+            <li>
+              <a href="/" class="menu__link">О нас</a>
+            </li>
+            <li>
+              <a href="/" class="menu__link">Цены</a>
+            </li>
+            <li>
+              <a href="/" class="menu__link">Оформить заказ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="home-banner">
+        <div class="container">
+          <div class="home-banner__text">
+            <h1 class="home-banner__title">
+              <span class="highlighted-text">Lorem ipsum</span>
+              dolor sit ametconsectetur
+              <span class="highlighted-text">adipiscing</span>
+            </h1>
+            <div class="list home-banner__list">
+              <p class="list__title">
+                At vero eos et accusamus et iusto odio dignissimos ducimus!
+              </p>
+              <ul>
+                <li class="list__item">Totam rem aperiam eaque ipsa</li>
+                <li class="list__item">
+                  Sit voluptatem accusantium doloremque laudantium
+                </li>
+                <li class="list__item">
+                  Sed ut perspiciatis, unde omnis iste natus error
+                </li>
+              </ul>
+            </div>
+            <div class="home-banner__actions">
+              <button class="button button--primary">Заказать</button>
+              <button class="button button--secondary">Подробнее</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="home-order">
+        <div class="container">
+          <h3 class="home-order__title">
+            Оформление <span class="highlighted-text">Заказа</span>
+          </h3>
+          <p class="home-order__subtitle">
+            Перед заполнением формы ознакомьтесь с нашей схемой работы!
+          </p>
+          <div class="steps home-order__steps">
+            <div class="steps__item">
+              <div class="icon icon--circled">
+                <img src="assets/icons/search.svg" alt="Search icon" />
+                <div class="steps__dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
+
+            <div class="steps__item">
+              <div class="icon icon--circled">
+                <img src="assets/icons/percent.svg" alt="Percent icon" />
+                <div class="steps__dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <p>Consecteturadipiscing elit</p>
+            </div>
+            <div class="steps__item">
+              <div class="icon icon--circled">
+                <img src="assets/icons/file.svg" alt="File icon" />
+                <div class="steps__dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <p>Sed do eiusmod tempor</p>
+            </div>
+            <div class="steps__item">
+              <div class="icon icon--circled">
+                <img src="assets/icons/envelope.svg" alt="Envelope icon" />
+                <div class="steps__dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <p>Esse cillum dolore eu fugiat</p>
+            </div>
+            <div class="steps__item">
+              <div class="icon icon--circled">
+                <img src="assets/icons/money.svg" alt="Money icon" />
+                <div class="steps__dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <p>Excepteur sint occaecat cupidatat non proident</p>
+            </div>
+          </div>
+          <form class="form home-order__form">
+            <div class="form__row">
+              <div class="select">
+                <input
+                  type="text"
+                  class="select__trigger"
+                  readonly
+                  value=""
+                  id="system-type"
+                  name="systemType"
+                  placeholder="Выберите тип системы"
+                />
+                <div class="select__options">
+                  <p class="select__option" data-value="Sed ut perspiciatis">
+                    Sed ut perspiciatis
+                  </p>
+                  <p class="select__option" data-value="Nemo enim ipsam">
+                    Nemo enim ipsam
+                  </p>
+                  <p class="select__option" data-value="Et harum quidem">
+                    Et harum quidem
+                  </p>
+                  <p class="select__option" data-value="Temporibus autem">
+                    Temporibus autem
+                  </p>
+                  <p class="select__option" data-value="Itaque earum rerum">
+                    Itaque earum rerum
+                  </p>
+                </div>
+              </div>
+              <div class="input">
+                <input
+                  type="email"
+                  placeholder="Ваш email"
+                  name="email"
+                  id="email"
+                />
+              </div>
+              <div class="input">
+                <input
+                  type="text"
+                  placeholder="Ваше имя"
+                  name="fname"
+                  id="fname"
+                />
+              </div>
+            </div>
+            <div class="form__row form__row--file">
+              <div class="range-slider">
+                <div class="range-slider__text">
+                  <div class="range-slider__label">
+                    Sed ut perspiciatis, unde omnis iste natus
+                  </div>
+                  <div class="range-slider__value">0%</div>
+                </div>
+                <div class="range-slider__inner-wrapper">
+                  <input
+                    type="range"
+                    name="range"
+                    class="range-slider__input"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                  <div class="range-slider__track">
+                    <div class="range-slider__progress"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="input input--file">
+                <input type="file" name="file" id="file" />
+                <p>Прикрепить файл</p>
+              </div>
+            </div>
+
+            <div class="form__row form__row--button">
+              <button type="submit" class="button button--primary">
+                Отправить
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__copyright">
+          © 2018 «LoremIpsum.net» Все права защищены.
+        </p>
+        <div class="payment-systems">
+          <div class="payment-systems__item">
+            <img src="assets/icons/qiwi.svg" alt="QIWI logo" />
+            <p>Qiwi wallet</p>
+          </div>
+          <div class="payment-systems__item">
+            <img src="assets/icons/yandex-money.svg" alt="Yandex Money logo" />
+            <p>Yandex Money</p>
+          </div>
+          <div class="payment-systems__item">
+            <img src="assets/icons/web-money.svg" alt="Web Money logo" />
+            <p>Web Money</p>
+          </div>
+        </div>
+        <div class="footer__contacts contacts">
+          <a href="mailto:info@ipsum228.com" class="contacts__item">
+            <img src="assets/icons/message.svg" alt="Envelope icon" />
+            info@ipsum228.com</a
+          >
+          <a href="https://vk.com/" target="_blank" class="contacts__item">
+            <img src="assets/icons/vk.svg" alt="Vk icon" />
+            Мы вконтакте</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

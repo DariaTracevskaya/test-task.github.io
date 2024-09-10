@@ -1,0 +1,38 @@
+.button {
+  padding: 15px 10px;
+  border-radius: 4px;
+  border: 1px solid $gray;
+  font-size: 0.8125rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  transition: background-color 0.3s;
+  cursor: pointer;
+
+  &:focus,
+  &:hover,
+  &:active {
+    outline: none;
+  }
+
+  &--primary {
+    background-color: $blue;
+    border-color: $white;
+    color: $white;
+
+    &:hover {
+      background-color: transparent;
+      border-color: $blue;
+      color: $blue;
+    }
+  }
+
+  &--secondary {
+    background-color: $white;
+    color: $gray100;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

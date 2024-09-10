@@ -1,0 +1,147 @@
+.home {
+  &-banner {
+    height: 100vh;
+    min-height: 750px;
+    background-image: url("/assets/images/home-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+
+    &__text {
+      display: grid;
+      gap: 80px;
+      padding-top: 203px;
+    }
+
+    &__title {
+      max-width: 780px;
+      width: 100%;
+      font-size: 3rem;
+      line-height: 1.2;
+      font-weight: 700;
+      color: $black;
+      text-transform: uppercase;
+    }
+
+    &__list {
+      ul {
+        padding-left: 15px;
+        list-style-type: "- ";
+      }
+    }
+
+    &__actions {
+      display: flex;
+      gap: 30px;
+
+      .button {
+        width: 183px;
+      }
+    }
+
+    @media screen and (max-width: $lg) {
+      height: auto;
+      background-position: center;
+    }
+
+    @media screen and (max-width: $sm) {
+      background-color: $white;
+      background-image: none;
+
+      &__text {
+        gap: 50px;
+      }
+
+      &__title {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media screen and (max-width: $xs) {
+      &__text {
+        padding-top: 180px;
+      }
+
+      &__title {
+        font-size: 1.5rem;
+      }
+
+      &__actions {
+        gap: 15px;
+
+        .button {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &-order {
+    padding: 121px 0 150px;
+    background-color: $gray200;
+    background-image: url("/assets/images/order-bg.png");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+
+    &__title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $white;
+    }
+
+    &__subtitle {
+      margin-top: 30px;
+      font-size: 1.125rem;
+      line-height: 1.2;
+      color: $gray300;
+    }
+
+    &__steps {
+      margin-top: 80px;
+    }
+
+    &__form {
+      margin-top: 80px;
+
+      .button {
+        width: 100%;
+        margin: 10px auto 0;
+      }
+    }
+
+    @media screen and (max-width: $sm) {
+      padding: 80px 0 100px;
+
+      &__title {
+        font-size: 2rem;
+      }
+
+      &__subtitle {
+        margin-top: 20px;
+        font-size: 1rem;
+      }
+
+      &__steps {
+        margin-top: 30px;
+      }
+
+      &__form {
+        margin-top: 50px;
+      }
+    }
+
+    @media screen and (max-width: $xs) {
+      &__title {
+        font-size: 1.5rem;
+      }
+
+      &__subtitle {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}

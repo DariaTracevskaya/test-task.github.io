@@ -1,0 +1,45 @@
+.form {
+  display: grid;
+  gap: 30px;
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    &--file {
+      align-items: flex-start;
+
+      & > div:first-child {
+        grid-column: span 2;
+      }
+    }
+
+    &--button button {
+      grid-column-start: 2;
+    }
+  }
+
+  @media screen and (max-width: $sm) {
+    &__row {
+      gap: 10px;
+    }
+  }
+
+  @media screen and (max-width: $xs) {
+    &__row {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+
+      &--file {
+        & > div:first-child {
+          grid-column: auto;
+        }
+      }
+
+      &--button button {
+        grid-column-start: 1;
+      }
+    }
+  }
+}

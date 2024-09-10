@@ -1,0 +1,73 @@
+.input {
+  input {
+    width: 100%;
+    padding: 12px 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    font-size: 1.125rem;
+    line-height: 1.35;
+    color: $gray200;
+    border: 1px solid $white;
+    border-radius: 3px;
+    transition: border-color 0.3s;
+
+    &::placeholder {
+      color: $gray200;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      outline: none;
+      border-color: $blue;
+    }
+
+    @media screen and (max-width: $sm) {
+      font-size: 0.875rem;
+    }
+  }
+
+  &--file {
+    position: relative;
+    width: 100%;
+    background-color: $white;
+    padding: 12px 10px;
+    color: $gray200;
+    border: 2px solid $blue;
+    border-radius: 3px;
+
+    input {
+      position: absolute;
+      inset: 0;
+      padding: 0;
+      opacity: 0;
+      z-index: 1;
+      cursor: pointer;
+
+      &::-webkit-file-upload-button {
+        visibility: hidden;
+      }
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      line-height: 1.2;
+      color: $gray200;
+      text-transform: uppercase;
+
+      &:before {
+        content: url("assets/icons/upload.svg");
+        height: 20px;
+        width: auto;
+      }
+
+      @media screen and (max-width: $sm) {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.select {
+  position: relative;
+  user-select: none;
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: $blue;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background: url("assets/icons/select-arrow.svg") no-repeat 50% 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+  }
+
+  input {
+    position: relative;
+    width: 100%;
+    padding: 12px 30px 12px 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    font-size: 1.125rem;
+    line-height: 1.35;
+    text-align: left;
+    color: $gray200;
+    border: 1px solid $white;
+    border-radius: 3px;
+    transition: border-color 0.3s;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    user-select: none;
+    cursor: pointer;
+
+    &::placeholder {
+      color: $gray200;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      outline: none;
+    }
+
+    @media screen and (max-width: $sm) {
+      font-size: 0.875rem;
+    }
+  }
+
+  &__options {
+    position: absolute;
+    display: grid;
+    gap: 16px;
+    max-height: 150px;
+    padding: 16px 8px;
+    background-color: rgba(39, 39, 51, 0.9);
+    border: 1px solid #3d4050;
+    border-radius: 0 0 3px 3px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    transition: opacity 0.3s, visibility 0.3s;
+    scrollbar-color: $blue $gray400;
+
+    ::-webkit-scrollbar-thumb {
+      background: $blue;
+    }
+
+    @media screen and (max-width: $xs) {
+      background-color: $gray200;
+    }
+  }
+
+  &__option {
+    color: $white;
+    text-align: left;
+    cursor: pointer;
+
+    &:hover,
+    &--selected {
+      color: $blue;
+    }
+  }
+
+  &--open {
+    input {
+      background-color: rgba(61, 64, 80, 0.85);
+      color: $white;
+      border-radius: 3px 3px 0 0;
+      border-color: $gray400;
+
+      &::placeholder {
+        color: $white;
+      }
+    }
+
+    &:after {
+      background: url("assets/icons/select-arrow-white.svg") no-repeat 50% 50%;
+      transform: rotate(180deg) translateY(50%);
+    }
+
+    .select__options {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
